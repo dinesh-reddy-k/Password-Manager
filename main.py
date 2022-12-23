@@ -21,11 +21,11 @@ class PasswordManagr(BasePasswordManager):
         if password==None:
             password=self.get_password()
         if password.isalpha() or password.isnumeric():
-            return 1
+            return 0
         elif password.isalnum():
-            return 2
+            return 1
         else:
-            return 3
+            return 2
 
 a=BasePasswordManager()
 new_password=input('Enter the Password:  ')
